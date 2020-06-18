@@ -57,7 +57,7 @@ def update_serie(id_serie):
     abort(404)
   if not request.json:
     abort(400)
-  if "nombre" in request.json and str(request.json["nombre"]) != str:
+  if "nombre" in request.json and type(request.json["nombre"]) != str:
     abort(400)
   if "temporada" in request.json and type(request.json["temporada"]) != str:
     abort(400)
